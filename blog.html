@@ -1,0 +1,3024 @@
+---
+layout: default
+title: Blog · AIRLab Hassen
+description: Research notes and tutorials in mathematical robotics, screw theory, Lie groups, physics-informed neural networks, hybrid robot learning, and quantum computing for robotics.
+permalink: /blog.html
+lang: en
+og_description: Mathematical robotics, physics-informed neural networks, and quantum computing for robotics.
+twitter_description: Research notes on mathematical robotics, physics-informed learning, and quantum robotics.
+social_image: /assets/img/foundations_of_robot_kinematics.png
+nav_key: blog
+mathjax: true
+page_css: /assets/css/pages/blog.css
+---
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="page-hero blog-research-hero">
+
+<p class="eyebrow">
+  Research Blog
+</p>
+
+<h1>
+  From mathematical robotics
+  to physics-informed intelligence
+  and quantum robotics.
+</h1>
+
+<p class="blog-lead">
+
+This blog is organized around three connected research directions.
+
+The first develops the mathematical and analytical foundations
+of robotics through mechanism theory, screw theory,
+Lie groups, Lie algebras, differential geometry,
+kinematics, singularity theory, stiffness,
+and geometric mechanics.
+
+The second explores hybrid intelligence:
+combining first-principles physics with neural networks
+to produce robot models that are data-efficient,
+interpretable and physically consistent.
+
+The third investigates quantum computing for robotics,
+including quantum machine learning,
+quantum optimization, reinforcement learning,
+motion planning and high-dimensional
+robot configuration search.
+
+</p>
+
+
+<div class="research-pill-row">
+
+<span class="research-pill">
+  Screw Theory
+</span>
+
+<span class="research-pill">
+  Lie Groups
+</span>
+
+<span class="research-pill">
+  Parallel Robots
+</span>
+
+<span class="research-pill">
+  Physics-Informed Learning
+</span>
+
+<span class="research-pill">
+  Scientific ML
+</span>
+
+<span class="research-pill">
+  Quantum Optimization
+</span>
+
+<span class="research-pill">
+  Quantum Machine Learning
+</span>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     THREE TRACKS
+     ========================================================= -->
+
+<section class="section-block">
+
+<p class="eyebrow">
+  Three research tracks
+</p>
+
+<h2>
+  A roadmap for current and future blog articles
+</h2>
+
+
+<div class="research-tracks">
+
+
+<!-- TRACK 1 -->
+
+<article class="track-card robotics">
+
+<div class="track-number">
+  1
+</div>
+
+<h2>
+  Mathematical & Analytical Robotics
+</h2>
+
+<p>
+  Geometry-first understanding of robotic mechanisms:
+  screw systems, rigid-body motion,
+  \(SO(3)\), \(SE(3)\),
+  Lie algebra, Jacobians,
+  reciprocity, constraints,
+  singularities, stiffness and synthesis.
+</p>
+
+<a href="#robotics">
+  Explore robotics mathematics →
+</a>
+
+</article>
+
+
+<!-- TRACK 2 -->
+
+<article class="track-card pinn">
+
+<div class="track-number">
+  2
+</div>
+
+<h2>
+  Physics-Informed Neural Networks
+</h2>
+
+<p>
+  Hybrid approaches combining
+  governing equations and measured data:
+  robot dynamics,
+  system identification,
+  inverse problems,
+  compliant mechanisms,
+  learned residuals and
+  physics-informed control.
+</p>
+
+<a href="#pinn">
+  Explore hybrid intelligence →
+</a>
+
+</article>
+
+
+<!-- TRACK 3 -->
+
+<article class="track-card quantum">
+
+<div class="track-number">
+  3
+</div>
+
+<h2>
+  Quantum for Robotics
+</h2>
+
+<p>
+  Quantum algorithms for robotic computation:
+  QML, variational quantum circuits,
+  Grover search, optimization,
+  path planning,
+  quantum reinforcement learning
+  and hybrid quantum-classical robotics.
+</p>
+
+<a href="#quantum">
+  Explore quantum robotics →
+</a>
+
+</article>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     CATEGORY 1
+     ========================================================= -->
+
+<section
+  class="section-block article-card"
+  id="robotics"
+>
+
+
+<div class="category-heading">
+
+<div class="category-title-wrap">
+
+<p class="eyebrow">
+  Category 1
+</p>
+
+<h2>
+  Robotics — Mathematical & Analytical Approaches
+</h2>
+
+<p>
+
+Robots are physical machines,
+but their motion is fundamentally geometric.
+
+A mathematical description should explain not only
+where the end-effector moves,
+but why a mechanism has a particular mobility,
+what motions its limbs permit,
+what forces its structure constrains,
+where singularities occur,
+and how architectures can be synthesized systematically.
+
+</p>
+
+</div>
+
+
+<div
+  class="category-index robotics-index"
+  aria-hidden="true"
+>
+  R
+</div>
+
+</div>
+
+
+<!-- EXISTING HIGH-QUALITY FIGURE -->
+
+<figure class="wide-figure">
+
+<img
+  alt="Foundations of robot kinematics"
+  loading="lazy"
+  decoding="async"
+  src="/assets/img/foundations_of_robot_kinematics.png"
+/>
+
+<figcaption>
+  Foundations of robotic kinematics:
+  open-chain, closed-chain and hybrid mechanisms,
+  forward/inverse kinematics,
+  mobility and differential motion.
+</figcaption>
+
+</figure>
+
+
+<!-- =========================================================
+     VECTOR FIGURE: GEOMETRIC ROBOTICS
+     ========================================================= -->
+
+<figure class="research-figure">
+
+<svg
+  viewBox="0 0 1200 430"
+  role="img"
+  aria-labelledby="roboticsFigureTitle roboticsFigureDesc"
+>
+
+<title id="roboticsFigureTitle">
+  Geometric robotics pipeline
+</title>
+
+<desc id="roboticsFigureDesc">
+  A vector diagram connecting joint coordinates,
+  screw axes, Lie algebra, exponential mapping,
+  rigid body transformations and Jacobian analysis.
+</desc>
+
+
+<defs>
+
+<linearGradient
+  id="roboticsBg"
+  x1="0"
+  x2="1"
+>
+
+<stop
+  offset="0%"
+  stop-color="#f8fbff"
+/>
+
+<stop
+  offset="100%"
+  stop-color="#eef6ff"
+/>
+
+</linearGradient>
+
+
+<marker
+  id="robotArrow"
+  viewBox="0 0 10 10"
+  refX="9"
+  refY="5"
+  markerWidth="7"
+  markerHeight="7"
+  orient="auto-start-reverse"
+>
+
+<path
+  d="M 0 0 L 10 5 L 0 10 z"
+  fill="#2563eb"
+/>
+
+</marker>
+
+</defs>
+
+
+<rect
+  width="1200"
+  height="430"
+  rx="22"
+  fill="url(#roboticsBg)"
+/>
+
+
+<!-- TITLE -->
+
+<text
+  x="55"
+  y="58"
+  font-size="26"
+  font-weight="700"
+  fill="#0b376b"
+>
+  Geometric Robotics: from joint motion to rigid-body motion
+</text>
+
+
+<text
+  x="55"
+  y="88"
+  font-size="16"
+  fill="#64748b"
+>
+  Screw coordinates and Lie theory provide a compact bridge between mechanism geometry and motion.
+</text>
+
+
+<!-- BLOCK 1 -->
+
+<rect
+  x="55"
+  y="145"
+  width="185"
+  height="150"
+  rx="18"
+  fill="#ffffff"
+  stroke="#bfd7f5"
+/>
+
+<text
+  x="147"
+  y="183"
+  text-anchor="middle"
+  font-size="19"
+  font-weight="700"
+  fill="#0b4f91"
+>
+  Joint space
+</text>
+
+<text
+  x="147"
+  y="225"
+  text-anchor="middle"
+  font-size="22"
+  fill="#172033"
+>
+  q, q̇
+</text>
+
+<text
+  x="147"
+  y="260"
+  text-anchor="middle"
+  font-size="14"
+  fill="#64748b"
+>
+  Generalized coordinates
+</text>
+
+
+<!-- ARROW -->
+
+<line
+  x1="242"
+  y1="220"
+  x2="310"
+  y2="220"
+  stroke="#2563eb"
+  stroke-width="3"
+  marker-end="url(#robotArrow)"
+/>
+
+
+<!-- BLOCK 2 -->
+
+<rect
+  x="320"
+  y="145"
+  width="190"
+  height="150"
+  rx="18"
+  fill="#ffffff"
+  stroke="#bfd7f5"
+/>
+
+<text
+  x="415"
+  y="183"
+  text-anchor="middle"
+  font-size="19"
+  font-weight="700"
+  fill="#0b4f91"
+>
+  Screw system
+</text>
+
+<text
+  x="415"
+  y="225"
+  text-anchor="middle"
+  font-size="21"
+  fill="#172033"
+>
+  ξ = (ω, v)
+</text>
+
+<text
+  x="415"
+  y="260"
+  text-anchor="middle"
+  font-size="14"
+  fill="#64748b"
+>
+  Instantaneous motion
+</text>
+
+
+<!-- ARROW -->
+
+<line
+  x1="512"
+  y1="220"
+  x2="580"
+  y2="220"
+  stroke="#2563eb"
+  stroke-width="3"
+  marker-end="url(#robotArrow)"
+/>
+
+
+<!-- BLOCK 3 -->
+
+<rect
+  x="590"
+  y="145"
+  width="190"
+  height="150"
+  rx="18"
+  fill="#ffffff"
+  stroke="#bfd7f5"
+/>
+
+<text
+  x="685"
+  y="183"
+  text-anchor="middle"
+  font-size="19"
+  font-weight="700"
+  fill="#0b4f91"
+>
+  Lie algebra
+</text>
+
+<text
+  x="685"
+  y="225"
+  text-anchor="middle"
+  font-size="22"
+  fill="#172033"
+>
+  se(3)
+</text>
+
+<text
+  x="685"
+  y="260"
+  text-anchor="middle"
+  font-size="14"
+  fill="#64748b"
+>
+  Tangent-space motion
+</text>
+
+
+<!-- ARROW -->
+
+<line
+  x1="782"
+  y1="220"
+  x2="850"
+  y2="220"
+  stroke="#2563eb"
+  stroke-width="3"
+  marker-end="url(#robotArrow)"
+/>
+
+
+<!-- BLOCK 4 -->
+
+<rect
+  x="860"
+  y="145"
+  width="190"
+  height="150"
+  rx="18"
+  fill="#ffffff"
+  stroke="#bfd7f5"
+/>
+
+<text
+  x="955"
+  y="183"
+  text-anchor="middle"
+  font-size="19"
+  font-weight="700"
+  fill="#0b4f91"
+>
+  Lie group
+</text>
+
+<text
+  x="955"
+  y="225"
+  text-anchor="middle"
+  font-size="22"
+  fill="#172033"
+>
+  SE(3)
+</text>
+
+<text
+  x="955"
+  y="260"
+  text-anchor="middle"
+  font-size="14"
+  fill="#64748b"
+>
+  Finite rigid motion
+</text>
+
+
+<!-- JACOBIAN -->
+
+<path
+  d="M415 296 C415 350, 760 350, 955 296"
+  fill="none"
+  stroke="#0ea5e9"
+  stroke-width="2.5"
+  stroke-dasharray="8 7"
+  marker-end="url(#robotArrow)"
+/>
+
+<text
+  x="685"
+  y="352"
+  text-anchor="middle"
+  font-size="17"
+  font-weight="700"
+  fill="#0369a1"
+>
+  Differential kinematics: V = J(q) q̇
+</text>
+
+
+<!-- BOTTOM NOTE -->
+
+<rect
+  x="55"
+  y="380"
+  width="995"
+  height="30"
+  rx="10"
+  fill="#dbeafe"
+/>
+
+<text
+  x="552"
+  y="401"
+  text-anchor="middle"
+  font-size="14"
+  fill="#1e3a8a"
+>
+  Analysis extends naturally to reciprocity, constraints, singularities, stiffness and mechanism synthesis.
+</text>
+
+</svg>
+
+
+<figcaption>
+
+Figure — A geometry-first view of robot kinematics.
+Joint motion produces twists in \(se(3)\);
+the exponential map generates finite rigid-body motions in \(SE(3)\);
+the Jacobian connects generalized velocity to body or spatial twist.
+
+</figcaption>
+
+</figure>
+
+
+<!-- EQUATIONS -->
+
+<div class="equation-grid">
+
+
+<div class="equation-card">
+
+<h3>
+  Product of exponentials
+</h3>
+
+<div class="math-box">
+
+\[
+T(q)=
+e^{[\mathcal S_1]q_1}
+e^{[\mathcal S_2]q_2}
+\cdots
+e^{[\mathcal S_n]q_n}
+M
+\]
+
+</div>
+
+<p>
+  A coordinate-efficient alternative
+  to purely frame-by-frame parameterization.
+</p>
+
+</div>
+
+
+<div class="equation-card">
+
+<h3>
+  Differential motion
+</h3>
+
+<div class="math-box">
+
+\[
+V_s
+=
+J_s(q)\dot q
+\]
+
+</div>
+
+<p>
+  The Jacobian columns are the transformed
+  joint screws expressed in a common frame.
+</p>
+
+</div>
+
+
+<div class="equation-card">
+
+<h3>
+  Screw reciprocity
+</h3>
+
+<div class="math-box">
+
+\[
+\mathcal W^T \mathcal T = 0
+\]
+
+</div>
+
+<p>
+  Reciprocal screw systems connect
+  permitted motion with constraint forces.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- RESEARCH ANCHORS -->
+
+<h3 class="future-heading">
+  Research anchors
+</h3>
+
+<div class="research-anchor">
+
+
+<div class="anchor-paper">
+
+<strong>
+  A Modified Lie Group-Based Synthesis
+  for Parallel Mechanisms
+</strong>
+
+<p>
+
+Hassen Nigatu &amp; Doik Kim,
+Mechanism and Machine Theory, 2025.
+
+Extends Lie-group synthesis to account for
+uncontrollable passive degrees of freedom,
+ineffective joints and immovable limbs.
+
+</p>
+
+<p>
+  <code>
+    DOI: 10.1016/j.mechmachtheory.2025.106183
+  </code>
+</p>
+
+</div>
+
+
+<div class="anchor-paper">
+
+<strong>
+  Unveiling SO(3) Parallel Robot Variants:
+  Application of the Optimal Robot to a Humanoid Eye
+</strong>
+
+<p>
+
+Hassen Nigatu and collaborators,
+IEEE Robotics and Automation Letters, 2025.
+
+A systematic analytical Lie-algebra approach
+to the classification and evaluation
+of SO(3)-type parallel robot architectures.
+
+</p>
+
+<p>
+  <code>
+    DOI: 10.1109/LRA.2025.3606380
+  </code>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="idea-box">
+
+<strong>
+  Mathematical philosophy of this track:
+</strong>
+
+instead of treating each robot as an unrelated mechanism,
+look for the geometry shared by many architectures.
+
+Screw systems describe instantaneous freedom;
+Lie groups describe finite displacement;
+reciprocity describes constraints;
+and algebraic structure makes mechanism
+classification and synthesis systematic.
+
+</div>
+
+
+<!-- FUTURE POSTS -->
+
+<h3 class="future-heading">
+  Current and future robotics articles
+</h3>
+
+
+<div class="future-grid">
+
+
+<article class="future-post">
+
+<span class="post-status status-available">
+  Available
+</span>
+
+<h3>
+  Foundations of Robot Kinematics
+</h3>
+
+<p>
+  Open chains, closed chains, mobility,
+  workspace, forward and inverse kinematics.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-available">
+  Available
+</span>
+
+<h3>
+  Screw Theory for Robotics
+</h3>
+
+<p>
+  Screw axis, pitch, twists,
+  wrenches, Plücker coordinates
+  and reciprocal screw systems.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-available">
+  Available
+</span>
+
+<h3>
+  Lie Groups and Lie Algebras in Robotics
+</h3>
+
+<p>
+  \(SO(3)\), \(SE(3)\),
+  \(so(3)\), \(se(3)\),
+  exponential/logarithm maps
+  and adjoint transformations.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-next">
+  Next
+</span>
+
+<h3>
+  From Denavit–Hartenberg to Product of Exponentials
+</h3>
+
+<p>
+  Comparing classical frame-based kinematics
+  with screw-coordinate robot modeling.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-next">
+  Next
+</span>
+
+<h3>
+  Reciprocal Screws:
+  Motion, Constraint and Force
+</h3>
+
+<p>
+  Why reciprocity is one of the most useful
+  ideas for parallel robot analysis.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Singularity Theory of Parallel Manipulators
+</h3>
+
+<p>
+  Constraint singularities,
+  actuation singularities,
+  Jacobian rank loss
+  and geometric interpretation.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Lie-Group Type Synthesis of Parallel Robots
+</h3>
+
+<p>
+  Displacement subgroups,
+  limb motion sets,
+  subgroup intersections
+  and architecture synthesis.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-research">
+  Research note
+</span>
+
+<h3>
+  SO(3) Parallel Robots and Robotic Eyes
+</h3>
+
+<p>
+  Architecture enumeration,
+  rotational workspace,
+  dexterity, compactness
+  and humanoid-eye applications.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Stiffness and Compliance through Screw Theory
+</h3>
+
+<p>
+  Wrench spaces, compliance matrices,
+  virtual work and direction-dependent stiffness.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Reconfigurable and Kinematotropic Mechanisms
+</h3>
+
+<p>
+  Configuration-dependent mobility,
+  bifurcation, passive freedom
+  and changing motion subgroups.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Geometric Control on SO(3) and SE(3)
+</h3>
+
+<p>
+  Controlling robots directly on manifolds
+  without introducing unnecessary local coordinates.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Continuum and Soft-Robot Kinematics
+</h3>
+
+<p>
+  From rigid screw systems
+  to spatial curves,
+  Cosserat models
+  and continuously deformable robots.
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CATEGORY 2 — PINN
+     ========================================================= -->
+
+<section
+  class="section-block article-card"
+  id="pinn"
+>
+
+
+<div class="category-heading">
+
+
+<div class="category-title-wrap">
+
+<p class="eyebrow">
+  Category 2
+</p>
+
+<h2>
+  Physics-Informed Neural Networks —
+  The Hybrid Approach
+</h2>
+
+<p>
+
+Classical robotics begins with equations.
+Modern machine learning begins with data.
+
+A powerful middle ground is to make the neural network
+respect the physics we already know
+while allowing it to learn the parts
+that are difficult to model accurately.
+
+This creates a hybrid model:
+<strong>
+  analytical where knowledge is reliable,
+  learned where uncertainty remains.
+</strong>
+
+</p>
+
+</div>
+
+
+<div
+  class="category-index pinn-index"
+  aria-hidden="true"
+>
+  π
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     PINN VECTOR FIGURE
+     ========================================================= -->
+
+<figure class="research-figure">
+
+<svg
+  viewBox="0 0 1200 455"
+  role="img"
+  aria-labelledby="pinnFigureTitle pinnFigureDesc"
+>
+
+<title id="pinnFigureTitle">
+  Physics-informed neural network architecture for robotics
+</title>
+
+<desc id="pinnFigureDesc">
+  Robot measurements and physics equations are combined
+  in a hybrid neural network with data and physics losses.
+</desc>
+
+
+<defs>
+
+<linearGradient
+  id="pinnBg"
+  x1="0"
+  x2="1"
+>
+
+<stop
+  offset="0%"
+  stop-color="#f5fcf9"
+/>
+
+<stop
+  offset="100%"
+  stop-color="#effaf6"
+/>
+
+</linearGradient>
+
+
+<marker
+  id="pinnArrow"
+  viewBox="0 0 10 10"
+  refX="9"
+  refY="5"
+  markerWidth="7"
+  markerHeight="7"
+  orient="auto-start-reverse"
+>
+
+<path
+  d="M 0 0 L 10 5 L 0 10 z"
+  fill="#059669"
+/>
+
+</marker>
+
+</defs>
+
+
+<rect
+  width="1200"
+  height="455"
+  rx="22"
+  fill="url(#pinnBg)"
+/>
+
+
+<text
+  x="55"
+  y="55"
+  font-size="26"
+  font-weight="700"
+  fill="#065f46"
+>
+  Physics-Informed Robot Learning
+</text>
+
+
+<text
+  x="55"
+  y="86"
+  font-size="16"
+  fill="#64748b"
+>
+  Measurements teach the unknown behavior; governing equations keep the learned model physically plausible.
+</text>
+
+
+<!-- DATA -->
+
+<rect
+  x="55"
+  y="140"
+  width="220"
+  height="105"
+  rx="18"
+  fill="#ffffff"
+  stroke="#a7f3d0"
+/>
+
+<text
+  x="165"
+  y="177"
+  text-anchor="middle"
+  font-size="18"
+  font-weight="700"
+  fill="#047857"
+>
+  Robot measurements
+</text>
+
+<text
+  x="165"
+  y="210"
+  text-anchor="middle"
+  font-size="16"
+  fill="#475569"
+>
+  q, q̇, q̈, τ
+</text>
+
+
+<!-- PHYSICS -->
+
+<rect
+  x="55"
+  y="280"
+  width="220"
+  height="105"
+  rx="18"
+  fill="#ffffff"
+  stroke="#a7f3d0"
+/>
+
+<text
+  x="165"
+  y="316"
+  text-anchor="middle"
+  font-size="18"
+  font-weight="700"
+  fill="#047857"
+>
+  Physics model
+</text>
+
+<text
+  x="165"
+  y="348"
+  text-anchor="middle"
+  font-size="15"
+  fill="#475569"
+>
+  Mq̈ + Cq̇ + g = τ
+</text>
+
+
+<!-- ARROWS -->
+
+<line
+  x1="277"
+  y1="192"
+  x2="380"
+  y2="220"
+  stroke="#059669"
+  stroke-width="3"
+  marker-end="url(#pinnArrow)"
+/>
+
+<line
+  x1="277"
+  y1="332"
+  x2="380"
+  y2="260"
+  stroke="#059669"
+  stroke-width="3"
+  marker-end="url(#pinnArrow)"
+/>
+
+
+<!-- NETWORK -->
+
+<rect
+  x="395"
+  y="150"
+  width="260"
+  height="210"
+  rx="22"
+  fill="#ffffff"
+  stroke="#6ee7b7"
+  stroke-width="2"
+/>
+
+<text
+  x="525"
+  y="188"
+  text-anchor="middle"
+  font-size="20"
+  font-weight="700"
+  fill="#065f46"
+>
+  Neural model fθ
+</text>
+
+
+<!-- NETWORK NODES -->
+
+<circle cx="455" cy="240" r="13" fill="#10b981"/>
+<circle cx="455" cy="285" r="13" fill="#10b981"/>
+
+<circle cx="525" cy="215" r="13" fill="#34d399"/>
+<circle cx="525" cy="260" r="13" fill="#34d399"/>
+<circle cx="525" cy="305" r="13" fill="#34d399"/>
+
+<circle cx="595" cy="240" r="13" fill="#059669"/>
+<circle cx="595" cy="285" r="13" fill="#059669"/>
+
+
+<!-- CONNECTIONS -->
+
+<g
+  stroke="#86efac"
+  stroke-width="2"
+>
+
+<line x1="468" y1="240" x2="512" y2="215"/>
+<line x1="468" y1="240" x2="512" y2="260"/>
+<line x1="468" y1="240" x2="512" y2="305"/>
+
+<line x1="468" y1="285" x2="512" y2="215"/>
+<line x1="468" y1="285" x2="512" y2="260"/>
+<line x1="468" y1="285" x2="512" y2="305"/>
+
+<line x1="538" y1="215" x2="582" y2="240"/>
+<line x1="538" y1="215" x2="582" y2="285"/>
+
+<line x1="538" y1="260" x2="582" y2="240"/>
+<line x1="538" y1="260" x2="582" y2="285"/>
+
+<line x1="538" y1="305" x2="582" y2="240"/>
+<line x1="538" y1="305" x2="582" y2="285"/>
+
+</g>
+
+
+<!-- OUTPUT -->
+
+<line
+  x1="657"
+  y1="255"
+  x2="745"
+  y2="255"
+  stroke="#059669"
+  stroke-width="3"
+  marker-end="url(#pinnArrow)"
+/>
+
+
+<rect
+  x="760"
+  y="145"
+  width="195"
+  height="110"
+  rx="18"
+  fill="#ffffff"
+  stroke="#a7f3d0"
+/>
+
+<text
+  x="858"
+  y="183"
+  text-anchor="middle"
+  font-size="18"
+  font-weight="700"
+  fill="#047857"
+>
+  Prediction
+</text>
+
+<text
+  x="858"
+  y="217"
+  text-anchor="middle"
+  font-size="15"
+  fill="#475569"
+>
+  dynamics / torque / state
+</text>
+
+
+<!-- LOSS -->
+
+<rect
+  x="760"
+  y="290"
+  width="365"
+  height="100"
+  rx="18"
+  fill="#ecfdf5"
+  stroke="#6ee7b7"
+/>
+
+<text
+  x="942"
+  y="326"
+  text-anchor="middle"
+  font-size="18"
+  font-weight="700"
+  fill="#047857"
+>
+  Hybrid training objective
+</text>
+
+<text
+  x="942"
+  y="358"
+  text-anchor="middle"
+  font-size="16"
+  fill="#475569"
+>
+  L = λd Ldata + λp Lphysics + λc Lconstraints
+</text>
+
+
+<path
+  d="M858 257 C858 270, 900 275, 925 288"
+  fill="none"
+  stroke="#059669"
+  stroke-width="2.5"
+  marker-end="url(#pinnArrow)"
+/>
+
+
+<path
+  d="M760 340 C690 410, 535 410, 525 362"
+  fill="none"
+  stroke="#059669"
+  stroke-width="2.5"
+  stroke-dasharray="7 6"
+  marker-end="url(#pinnArrow)"
+/>
+
+
+</svg>
+
+
+<figcaption>
+
+Figure — A hybrid physics-informed learning architecture.
+Robot measurements contribute a data loss,
+while the analytical dynamics generate a physics residual.
+Training balances empirical accuracy
+with physical consistency.
+
+</figcaption>
+
+</figure>
+
+
+<!-- PINN EQUATIONS -->
+
+<div class="equation-grid">
+
+
+<div class="equation-card">
+
+<h3>
+  Robot dynamics
+</h3>
+
+<div class="math-box">
+
+\[
+M(q)\ddot q
++
+C(q,\dot q)\dot q
++
+g(q)
++
+f(\dot q)
+=
+\tau
+\]
+
+</div>
+
+<p>
+  The known first-principles model
+  becomes a structural prior.
+</p>
+
+</div>
+
+
+<div class="equation-card">
+
+<h3>
+  Physics residual
+</h3>
+
+<div class="math-box">
+
+\[
+r_{\mathrm{dyn}}
+=
+M(q)\ddot q_\theta
++
+C(q,\dot q)\dot q
++
+g(q)
+-
+\tau
+\]
+
+</div>
+
+<p>
+  Automatic differentiation can evaluate
+  residuals during training.
+</p>
+
+</div>
+
+
+<div class="equation-card">
+
+<h3>
+  Hybrid objective
+</h3>
+
+<div class="math-box">
+
+\[
+\mathcal L
+=
+\lambda_d \mathcal L_{\mathrm{data}}
++
+\lambda_p
+\|r_{\mathrm{dyn}}\|^2
++
+\lambda_c
+\mathcal L_{\mathrm{constraint}}
+\]
+
+</div>
+
+<p>
+  Physics acts as an additional source
+  of supervision.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="idea-box green">
+
+<strong>
+  The hybrid idea:
+</strong>
+
+a perfect analytical model is rarely available,
+but throwing physics away is equally wasteful.
+
+A robot's inertia,
+gravity, topology, geometry,
+constraints and conservation laws
+contain valuable information.
+
+The neural network should therefore learn
+<strong>model error</strong>,
+<strong>unknown interactions</strong>,
+or <strong>difficult nonlinear terms</strong>
+instead of rediscovering every physical principle
+from data.
+
+</div>
+
+
+<!-- FUTURE PINN BLOG POSTS -->
+
+<h3 class="future-heading">
+  Physics-informed blog roadmap
+</h3>
+
+
+<div class="future-grid">
+
+
+<article class="future-post">
+
+<span class="post-status status-next">
+  Next
+</span>
+
+<h3>
+  Why Physics-Informed Learning for Robotics?
+</h3>
+
+<p>
+  Comparing analytical models,
+  black-box neural networks
+  and hybrid scientific machine learning.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-next">
+  Next
+</span>
+
+<h3>
+  PINNs from First Principles
+</h3>
+
+<p>
+  Automatic differentiation,
+  collocation points,
+  governing equations,
+  boundary conditions
+  and composite losses.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Physics-Informed Robot Inverse Dynamics
+</h3>
+
+<p>
+  Learning torque models while preserving
+  rigid-body dynamics structure.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Deep Lagrangian Networks for Robots
+</h3>
+
+<p>
+  Learning physically consistent kinetic
+  and potential-energy models from trajectory data.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Hamiltonian Neural Networks
+</h3>
+
+<p>
+  Energy-based learning,
+  Hamilton's equations
+  and structure-preserving robot models.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Hybrid Residual Learning
+</h3>
+
+<p>
+  Start with \(f_{\text{physics}}\),
+  then train a neural residual
+  \(f_\theta\) to model what physics misses.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-research">
+  Research direction
+</span>
+
+<h3>
+  Physics-Informed Parallel Robot Models
+</h3>
+
+<p>
+  Incorporating loop-closure equations,
+  screw constraints,
+  mobility and geometric structure
+  into learned models.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-research">
+  Research direction
+</span>
+
+<h3>
+  Lie-Group-Informed Neural Networks
+</h3>
+
+<p>
+  Learning directly on
+  \(SO(3)\), \(SE(3)\)
+  and manifold-valued robot states
+  rather than Euclidean approximations.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  PINNs for Compliant and Soft Robots
+</h3>
+
+<p>
+  Combining reduced physics models
+  with neural corrections
+  for elasticity and unmodeled deformation.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Physics-Informed System Identification
+</h3>
+
+<p>
+  Estimating inertial,
+  friction and stiffness parameters
+  jointly with neural components.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Physics-Informed Control
+</h3>
+
+<p>
+  Integrating learned dynamics
+  with computed torque,
+  MPC, passivity and stability-based controllers.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-research">
+  Research direction
+</span>
+
+<h3>
+  From PINNs to Differentiable Robots
+</h3>
+
+<p>
+  Differentiable simulation,
+  neural ODEs,
+  differentiable kinematics
+  and end-to-end robot optimization.
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CATEGORY 3 — QUANTUM
+     ========================================================= -->
+
+<section
+  class="section-block article-card"
+  id="quantum"
+>
+
+
+<div class="category-heading">
+
+<div class="category-title-wrap">
+
+<p class="eyebrow">
+  Category 3
+</p>
+
+<h2>
+  Quantum Computing for Robotics
+</h2>
+
+<p>
+
+Robotics contains computationally expensive problems:
+high-dimensional configuration search,
+combinatorial task planning,
+multi-robot allocation,
+nonconvex optimization
+and learning over large state-action spaces.
+
+Quantum computing introduces a fundamentally different
+computational model.
+
+The near-term opportunity is likely to be
+<strong>
+  hybrid quantum-classical robotics
+</strong>:
+classical processors handle perception,
+robot control and physical interfaces,
+while quantum processors address
+selected optimization and learning subproblems.
+
+</p>
+
+</div>
+
+
+<div
+  class="category-index quantum-index"
+  aria-hidden="true"
+>
+  Q
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     QUANTUM VECTOR FIGURE
+     ========================================================= -->
+
+<figure class="research-figure">
+
+<svg
+  viewBox="0 0 1200 455"
+  role="img"
+  aria-labelledby="quantumFigureTitle quantumFigureDesc"
+>
+
+<title id="quantumFigureTitle">
+  Hybrid quantum classical robotics workflow
+</title>
+
+<desc id="quantumFigureDesc">
+  Classical robot data are encoded into a quantum circuit,
+  processed by quantum gates and measurements,
+  then returned to a classical optimizer and robot controller.
+</desc>
+
+
+<defs>
+
+<linearGradient
+  id="quantumBg"
+  x1="0"
+  x2="1"
+>
+
+<stop
+  offset="0%"
+  stop-color="#fbf9ff"
+/>
+
+<stop
+  offset="100%"
+  stop-color="#f5f1ff"
+/>
+
+</linearGradient>
+
+
+<marker
+  id="quantumArrow"
+  viewBox="0 0 10 10"
+  refX="9"
+  refY="5"
+  markerWidth="7"
+  markerHeight="7"
+  orient="auto-start-reverse"
+>
+
+<path
+  d="M 0 0 L 10 5 L 0 10 z"
+  fill="#7c3aed"
+/>
+
+</marker>
+
+</defs>
+
+
+<rect
+  width="1200"
+  height="455"
+  rx="22"
+  fill="url(#quantumBg)"
+/>
+
+
+<text
+  x="55"
+  y="55"
+  font-size="26"
+  font-weight="700"
+  fill="#5b21b6"
+>
+  Hybrid Quantum–Classical Robotics
+</text>
+
+
+<text
+  x="55"
+  y="86"
+  font-size="16"
+  fill="#64748b"
+>
+  Quantum processors act as specialized accelerators inside a larger classical robotic system.
+</text>
+
+
+<!-- ROBOT -->
+
+<rect
+  x="50"
+  y="145"
+  width="190"
+  height="160"
+  rx="18"
+  fill="#ffffff"
+  stroke="#ddd6fe"
+/>
+
+<text
+  x="145"
+  y="180"
+  text-anchor="middle"
+  font-size="19"
+  font-weight="700"
+  fill="#6d28d9"
+>
+  Robot problem
+</text>
+
+<text
+  x="145"
+  y="219"
+  text-anchor="middle"
+  font-size="15"
+  fill="#475569"
+>
+  configuration
+</text>
+
+<text
+  x="145"
+  y="244"
+  text-anchor="middle"
+  font-size="15"
+  fill="#475569"
+>
+  planning / optimization
+</text>
+
+<text
+  x="145"
+  y="269"
+  text-anchor="middle"
+  font-size="15"
+  fill="#475569"
+>
+  learning
+</text>
+
+
+<!-- ARROW -->
+
+<line
+  x1="242"
+  y1="225"
+  x2="310"
+  y2="225"
+  stroke="#7c3aed"
+  stroke-width="3"
+  marker-end="url(#quantumArrow)"
+/>
+
+
+<!-- ENCODING -->
+
+<rect
+  x="320"
+  y="145"
+  width="185"
+  height="160"
+  rx="18"
+  fill="#ffffff"
+  stroke="#ddd6fe"
+/>
+
+<text
+  x="412"
+  y="180"
+  text-anchor="middle"
+  font-size="19"
+  font-weight="700"
+  fill="#6d28d9"
+>
+  Encoding
+</text>
+
+<text
+  x="412"
+  y="223"
+  text-anchor="middle"
+  font-size="17"
+  fill="#475569"
+>
+  x → |ψ(x)⟩
+</text>
+
+<text
+  x="412"
+  y="260"
+  text-anchor="middle"
+  font-size="14"
+  fill="#64748b"
+>
+  map classical variables
+</text>
+
+
+<!-- ARROW -->
+
+<line
+  x1="507"
+  y1="225"
+  x2="565"
+  y2="225"
+  stroke="#7c3aed"
+  stroke-width="3"
+  marker-end="url(#quantumArrow)"
+/>
+
+
+<!-- QUANTUM PROCESSOR -->
+
+<rect
+  x="575"
+  y="125"
+  width="265"
+  height="200"
+  rx="22"
+  fill="#ffffff"
+  stroke="#c4b5fd"
+  stroke-width="2"
+/>
+
+<text
+  x="707"
+  y="160"
+  text-anchor="middle"
+  font-size="19"
+  font-weight="700"
+  fill="#5b21b6"
+>
+  Quantum processor
+</text>
+
+
+<!-- QUBIT LINES -->
+
+<line
+  x1="615"
+  y1="205"
+  x2="800"
+  y2="205"
+  stroke="#a78bfa"
+  stroke-width="2"
+/>
+
+<line
+  x1="615"
+  y1="245"
+  x2="800"
+  y2="245"
+  stroke="#a78bfa"
+  stroke-width="2"
+/>
+
+<line
+  x1="615"
+  y1="285"
+  x2="800"
+  y2="285"
+  stroke="#a78bfa"
+  stroke-width="2"
+/>
+
+
+<!-- GATES -->
+
+<rect x="650" y="187" width="36" height="36" rx="5" fill="#ede9fe" stroke="#7c3aed"/>
+<text x="668" y="211" text-anchor="middle" font-size="15" fill="#5b21b6">H</text>
+
+<rect x="705" y="227" width="42" height="36" rx="5" fill="#ede9fe" stroke="#7c3aed"/>
+<text x="726" y="251" text-anchor="middle" font-size="14" fill="#5b21b6">Ry</text>
+
+<circle cx="760" cy="205" r="7" fill="#7c3aed"/>
+<circle cx="760" cy="285" r="15" fill="none" stroke="#7c3aed" stroke-width="2"/>
+<line x1="760" y1="212" x2="760" y2="270" stroke="#7c3aed" stroke-width="2"/>
+
+
+<!-- ARROW -->
+
+<line
+  x1="842"
+  y1="225"
+  x2="900"
+  y2="225"
+  stroke="#7c3aed"
+  stroke-width="3"
+  marker-end="url(#quantumArrow)"
+/>
+
+
+<!-- OUTPUT -->
+
+<rect
+  x="910"
+  y="145"
+  width="220"
+  height="160"
+  rx="18"
+  fill="#ffffff"
+  stroke="#ddd6fe"
+/>
+
+<text
+  x="1020"
+  y="180"
+  text-anchor="middle"
+  font-size="19"
+  font-weight="700"
+  fill="#6d28d9"
+>
+  Classical result
+</text>
+
+<text
+  x="1020"
+  y="222"
+  text-anchor="middle"
+  font-size="15"
+  fill="#475569"
+>
+  measurement
+</text>
+
+<text
+  x="1020"
+  y="247"
+  text-anchor="middle"
+  font-size="15"
+  fill="#475569"
+>
+  optimizer
+</text>
+
+<text
+  x="1020"
+  y="272"
+  text-anchor="middle"
+  font-size="15"
+  fill="#475569"
+>
+  q*
+</text>
+
+
+<!-- RETURN LOOP -->
+
+<path
+  d="M1020 307 C1020 397, 145 397, 145 308"
+  fill="none"
+  stroke="#8b5cf6"
+  stroke-width="2.5"
+  stroke-dasharray="8 7"
+  marker-end="url(#quantumArrow)"
+/>
+
+<text
+  x="590"
+  y="398"
+  text-anchor="middle"
+  font-size="16"
+  font-weight="700"
+  fill="#6d28d9"
+>
+  Hybrid loop: evaluate → optimize → update robot decision
+</text>
+
+</svg>
+
+
+<figcaption>
+
+Figure — Conceptual hybrid quantum-classical architecture for robotics.
+The quantum computer does not replace the robot controller;
+it acts as a specialized computational module
+inside a classical robotic workflow.
+
+</figcaption>
+
+</figure>
+
+
+<!-- QUANTUM EQUATIONS -->
+
+<div class="equation-grid">
+
+
+<div class="equation-card">
+
+<h3>
+  Quantum state
+</h3>
+
+<div class="math-box">
+
+\[
+|\psi\rangle
+=
+\sum_{i=0}^{2^n-1}
+\alpha_i |i\rangle
+\]
+
+</div>
+
+<p>
+  \(n\) qubits describe amplitudes
+  over \(2^n\) computational basis states.
+</p>
+
+</div>
+
+
+<div class="equation-card">
+
+<h3>
+  Variational quantum model
+</h3>
+
+<div class="math-box">
+
+\[
+|\psi(x,\theta)\rangle
+=
+U(\theta)
+U_{\phi}(x)
+|0\rangle^{\otimes n}
+\]
+
+</div>
+
+<p>
+  Classical robot states can be encoded
+  into a parameterized quantum circuit.
+</p>
+
+</div>
+
+
+<div class="equation-card">
+
+<h3>
+  Grover search
+</h3>
+
+<div class="math-box">
+
+\[
+O(N)
+\quad\rightarrow\quad
+O(\sqrt N)
+\]
+
+</div>
+
+<p>
+  For an unstructured search oracle,
+  Grover's algorithm provides
+  a quadratic query-complexity advantage.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- HASSEN QUANTUM RESEARCH -->
+
+<h3 class="future-heading">
+  Research anchors
+</h3>
+
+
+<div class="research-anchor">
+
+
+<div class="anchor-paper">
+
+<strong>
+  Quantum Machine Learning and Grover's Algorithm
+  for Quantum Optimization of Robotic Manipulators
+</strong>
+
+<p>
+
+Hassen Nigatu,
+Gaokun Shi,
+Jituo Li,
+Jin Wang,
+Guodong Lu
+and Howard Li.
+
+IEEE Robotics and Automation Letters, 2025.
+
+A quantum-native framework combining
+a parameterized quantum model
+with Grover search
+for manipulator kinematic optimization.
+
+</p>
+
+<p>
+  <code>
+    DOI: 10.1109/LRA.2025.3627071
+  </code>
+</p>
+
+</div>
+
+
+<div class="anchor-paper">
+
+<strong>
+  Quantum Machine Learning for Robotics:
+  A Comprehensive Review of Algorithms,
+  Applications, and Future Directions
+</strong>
+
+<p>
+
+Hassen Nigatu and collaborators, 2026.
+
+A broad review of quantum machine learning,
+quantum reinforcement learning,
+quantum optimization,
+path planning,
+multi-robot systems
+and opportunities for quantum-enhanced robotics.
+
+</p>
+
+<p>
+  <code>
+    DOI: 10.65218/jius.2026.13
+  </code>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="idea-box purple">
+
+<strong>
+  Important scientific perspective:
+</strong>
+
+quantum robotics should not be presented
+as though today's quantum computers
+can simply replace classical robot computers.
+
+A professional analysis must separate
+theoretical quantum complexity advantages
+from end-to-end experimental speedup.
+
+Encoding cost,
+measurement cost,
+noise,
+circuit depth,
+oracle construction
+and strong classical baselines
+must all be considered.
+
+</div>
+
+
+<!-- FUTURE QUANTUM POSTS -->
+
+<h3 class="future-heading">
+  Quantum robotics blog roadmap
+</h3>
+
+
+<div class="future-grid">
+
+
+<article class="future-post">
+
+<span class="post-status status-next">
+  Next
+</span>
+
+<h3>
+  Quantum Computing for Roboticists
+</h3>
+
+<p>
+  Qubits, superposition,
+  entanglement,
+  gates, circuits,
+  measurement
+  and the NISQ era.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-next">
+  Next
+</span>
+
+<h3>
+  How Can Robot Variables Be Encoded into Qubits?
+</h3>
+
+<p>
+  Basis encoding,
+  angle encoding,
+  amplitude encoding
+  and practical trade-offs
+  for robotic states.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-research">
+  Research-based
+</span>
+
+<h3>
+  QML + Grover Search for Manipulator Optimization
+</h3>
+
+<p>
+  A tutorial interpretation
+  of the quantum-native kinematic optimization
+  framework developed by Nigatu and collaborators.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Variational Quantum Circuits for Robot Learning
+</h3>
+
+<p>
+  Parameterized quantum circuits
+  as hybrid function approximators
+  for robotic learning problems.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Quantum Optimization for Inverse Kinematics
+</h3>
+
+<p>
+  Formulating redundant robot IK
+  as discrete,
+  variational
+  and hybrid optimization problems.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  QAOA for Robotic Planning
+</h3>
+
+<p>
+  Mapping scheduling,
+  task allocation
+  and discrete planning
+  onto combinatorial quantum optimization.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Quantum Reinforcement Learning for Robotics
+</h3>
+
+<p>
+  Quantum policies,
+  quantum value functions,
+  hybrid actor-critic systems
+  and multi-agent learning.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Quantum Path Planning
+</h3>
+
+<p>
+  Grover search,
+  quantum walks,
+  QAOA
+  and hybrid approaches
+  to navigation problems.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-research">
+  Research direction
+</span>
+
+<h3>
+  Quantum Optimization of Parallel Robots
+</h3>
+
+<p>
+  Architecture selection,
+  workspace optimization,
+  dexterity,
+  singularity avoidance
+  and dimensional synthesis.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  Quantum Multi-Robot Task Allocation
+</h3>
+
+<p>
+  Combinatorial assignment,
+  routing,
+  cooperation
+  and scheduling
+  for robot fleets.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-research">
+  Research direction
+</span>
+
+<h3>
+  Physics-Informed Quantum Machine Learning
+</h3>
+
+<p>
+  A future bridge between
+  analytical robot physics,
+  classical neural networks
+  and variational quantum models.
+</p>
+
+</article>
+
+
+<article class="future-post">
+
+<span class="post-status status-planned">
+  Planned
+</span>
+
+<h3>
+  What Would Real Quantum Advantage in Robotics Mean?
+</h3>
+
+<p>
+  Complexity,
+  data loading,
+  oracle construction,
+  noise,
+  benchmarking
+  and honest classical comparisons.
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONVERGENCE
+     ========================================================= -->
+
+<section class="section-block article-card">
+
+<p class="eyebrow">
+  The bigger picture
+</p>
+
+<h2>
+  Where the three research directions meet
+</h2>
+
+
+<div class="convergence-grid">
+
+
+<div class="convergence-card">
+
+<strong>
+  Mathematics provides structure
+</strong>
+
+<p>
+
+Screw theory,
+Lie groups,
+constraints
+and mechanism geometry
+describe what motions
+are physically possible.
+
+</p>
+
+</div>
+
+
+<div class="convergence-card">
+
+<strong>
+  Learning handles uncertainty
+</strong>
+
+<p>
+
+Physics-informed models learn friction,
+deformation,
+unknown dynamics
+and complex interactions
+that analytical models cannot capture perfectly.
+
+</p>
+
+</div>
+
+
+<div class="convergence-card">
+
+<strong>
+  Quantum computing targets complexity
+</strong>
+
+<p>
+
+Hybrid quantum algorithms may eventually
+accelerate selected optimization,
+learning and search problems
+that become expensive
+as robotic systems scale.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="idea-box">
+
+<strong>
+  Long-term research vision:
+</strong>
+
+a future robot model may combine
+geometric mechanics,
+physics-informed learning
+and quantum optimization.
+
+The analytical model supplies symmetry,
+constraints and conservation structure;
+
+the neural model learns uncertainty
+and unmodeled physics;
+
+and a specialized quantum algorithm
+searches difficult configuration,
+planning or optimization spaces.
+
+</div>
+
+
+<div class="math-box">
+
+\[
+\boxed{
+\text{Geometric Robotics}
++
+\text{Physics-Informed Learning}
++
+\text{Quantum Optimization}
+\;\longrightarrow\;
+\text{Hybrid Intelligent Robotics}
+}
+\]
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     RECOMMENDED READING
+     ========================================================= -->
+
+<section class="section-block article-card">
+
+<p class="eyebrow">
+  Research foundations
+</p>
+
+<h2>
+  Suggested literature behind the three tracks
+</h2>
+
+
+<div class="reading-grid">
+
+
+<div class="reading-card">
+
+<h3>
+  Mathematical Robotics
+</h3>
+
+<p>
+  Davidson &amp; Hunt,
+  <em>Robots and Screw Theory</em>.
+</p>
+
+<p>
+  Murray, Li &amp; Sastry,
+  <em>A Mathematical Introduction to Robotic Manipulation</em>.
+</p>
+
+<p>
+  Lynch &amp; Park,
+  <em>Modern Robotics</em>.
+</p>
+
+</div>
+
+
+<div class="reading-card">
+
+<h3>
+  Physics-Informed Robotics
+</h3>
+
+<p>
+
+Liu, Borja &amp; Della Santina,
+<em>
+Physics-Informed Neural Networks
+to Model and Control Robots:
+A Theoretical and Experimental Investigation
+</em>.
+
+</p>
+
+<p>
+
+Sivtsov et al.,
+<em>
+Physics-Informed Neural Networks in Robotics:
+A Review
+</em>.
+
+</p>
+
+</div>
+
+
+<div class="reading-card">
+
+<h3>
+  Quantum Robotics
+</h3>
+
+<p>
+
+Nigatu et al.,
+<em>
+Quantum Machine Learning and Grover's Algorithm
+for Quantum Optimization of Robotic Manipulators
+</em>.
+
+</p>
+
+<p>
+
+Nigatu et al.,
+<em>
+Quantum Machine Learning for Robotics:
+A Comprehensive Review of Algorithms,
+Applications, and Future Directions
+</em>.
+
+</p>
+
+<p>
+
+Meyer et al.,
+<em>
+A Survey on Quantum Reinforcement Learning
+</em>.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CLOSING
+     ========================================================= -->
+
+<section class="section-block article-card">
+
+<p class="eyebrow">
+  Blog philosophy
+</p>
+
+<h2>
+  Theory first, intelligence second, computation third.
+</h2>
+
+<p>
+
+The purpose of this blog is not simply to collect
+robotics formulas or report fashionable AI methods.
+
+The goal is to understand
+<strong>
+  why a robot behaves the way it does,
+</strong>
+then identify
+<strong>
+  which parts should be modeled analytically,
+</strong>
+which parts should be learned from data,
+and which computational bottlenecks
+may benefit from new computing paradigms.
+
+</p>
+
+<p>
+
+The three categories therefore form a natural progression:
+
+<strong>
+  mathematical robotics
+</strong>
+provides structure,
+
+<strong>
+  physics-informed neural networks
+</strong>
+introduce adaptive intelligence without discarding structure,
+
+and
+<strong>
+  quantum robotics
+</strong>
+investigates how future computation may address
+the most demanding search,
+optimization and learning problems.
+
+</p>
+
+
+<div class="math-box">
+
+\[
+\text{Understand the geometry}
+\;\rightarrow\;
+\text{respect the physics}
+\;\rightarrow\;
+\text{learn the uncertainty}
+\;\rightarrow\;
+\text{optimize intelligently}
+\]
+
+</div>
+
+</section>

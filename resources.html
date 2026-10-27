@@ -1,0 +1,251 @@
+---
+layout: default
+title: Resources · AIRLab Hassen
+description: Robotics programs, community links, books, lecture notes, and technical resources.
+permalink: /resources.html
+lang: en
+social_image: /assets/img/Resources.png
+nav_key: resources
+page_css: /assets/css/pages/resources.css
+---
+
+<section class="page-hero">
+
+      <p class="eyebrow">
+        Resources
+      </p>
+
+      <h1>
+        Programs, community links, books,
+        lecture notes, and slides.
+      </h1>
+
+      <p>
+        This page shows robot buddies available and lists useful resources related to robotics.
+      </p>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- LAB RESOURCES FIGURE                                  -->
+    <!-- This appears before all other resources               -->
+    <!-- ===================================================== -->
+
+    <section
+      aria-labelledby="lab-resources-heading"
+      class="lab-resources-feature"
+    >
+
+      <h2
+        class="visually-hidden"
+        id="lab-resources-heading"
+      >
+        Laboratory Resources
+      </h2>
+
+      <figure class="lab-resources-figure">
+
+        <img
+          src="/assets/img/Resources.png"
+          alt="AIRLab Hassen laboratory resources showing robotic testbeds, manipulators, parallel mechanisms, and custom robotic platforms."
+          decoding="async"
+          fetchpriority="high"
+          loading="eager"
+        />
+
+        <figcaption>
+          Robotic testbeds and modular platforms for research and development.
+        </figcaption>
+
+      </figure>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- DIGITAL FABRICATION EQUIPMENT                          -->
+    <!-- Content is maintained in _data/lab_resources.yml      -->
+    <!-- ===================================================== -->
+
+    <section aria-labelledby="lab-equipment-heading" class="section-block lab-equipment-section">
+
+      <div class="section-heading">
+        <p class="eyebrow">Lab resources</p>
+        <h2 id="lab-equipment-heading">Digital fabrication and prototyping equipment</h2>
+        <p>
+          In-house equipment supporting rapid prototyping, custom mechanisms,
+          experimental fixtures, and small-scale robotic hardware development.
+        </p>
+      </div>
+
+      <div class="lab-equipment-grid">
+        {% for resource in site.data.lab_resources %}
+        <article class="lab-equipment-card">
+          <figure class="lab-equipment-media">
+            <img
+              alt="{{ resource.image_alt | escape }}"
+              decoding="async"
+              loading="lazy"
+              src="{{ resource.image | relative_url }}"
+            />
+            <figcaption>{{ resource.category }}</figcaption>
+          </figure>
+
+          <div class="lab-equipment-copy">
+            <h3>{{ resource.name }}</h3>
+            <p>{{ resource.description }}</p>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- OTHER RESOURCES                                       -->
+    <!-- ===================================================== -->
+
+    <section class="section-block resource-grid">
+
+      <article>
+
+        <span class="resource-icon">⌘</span>
+
+        <h2>
+          Programs and related files
+        </h2>
+
+        <ul class="link-list">
+
+          <li>
+            <a
+              href="https://github.com/InteractiveRoboticsHassen"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.mathworks.com/matlabcentral"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              MathWorks community
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.kaggle.com/code/hassennigatu/simple-mnist-nn-from-scratch-numpy-no-tf-keras?scriptVersionId=97177808"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              ML with Kaggle Python
+            </a>
+          </li>
+
+        </ul>
+
+      </article>
+
+
+      <article>
+
+        <span class="resource-icon">◎</span>
+
+        <h2>
+          Community
+        </h2>
+
+        <ul class="link-list">
+
+          <li>
+            <a
+              href="https://www.engineeringforchange.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Engineering for Change
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.ieee-ras.org/about-ras"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              IEEE Robotics and Automation Society
+            </a>
+          </li>
+
+        </ul>
+
+      </article>
+
+
+      <article>
+
+        <span class="resource-icon">▣</span>
+
+        <h2>
+          Books
+        </h2>
+
+        <ul class="link-list">
+
+          <li>
+            <a
+              href="http://hades.mech.northwestern.edu/images/7/7f/MR.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Modern Robotics: Mechanics, Planning, and Control
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Probabilistic Robotics
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1HjTFozXgearb-wJ__mZ1NTcrovwDYg8d/view?usp=sharing"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Robotics, Vision and Control
+            </a>
+          </li>
+
+        </ul>
+
+      </article>
+
+
+      <article>
+
+        <span class="resource-icon">✦</span>
+
+        <h2>
+          Lecture notes and slides
+        </h2>
+
+        <p>
+          Lecture decks and downloadable notes will be added here.
+        </p>
+
+      </article>
+
+    </section>

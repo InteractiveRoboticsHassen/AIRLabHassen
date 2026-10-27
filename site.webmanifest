@@ -1,0 +1,17 @@
+{
+  "name": "AIRLab Hassen",
+  "short_name": "AIRLab Hassen",
+  "description": "Academic robotics, mechanisms, kinematics, quantum computation, and machine-learning research website.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7fafc",
+  "theme_color": "#496f86",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
